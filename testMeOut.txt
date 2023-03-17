@@ -1,0 +1,176 @@
+
+***********************
+Starting Test #0: Horizontal Win via constructor
+  1  2  3 
+1 P  P  P 
+2 Q  Q  Q 
+3 *  *  * 
+Player P won via Row 1
+Passed test #0(x wins via first row)
+
+***********************
+Starting Test #1: Vertical Win via constructor
+  1  2  3 
+1 Q  P  * 
+2 Q  P  * 
+3 Q  P  * 
+Player Q won via Column 1
+Passed test #1(y wins via first column)
+
+***********************
+Starting Test #2: Diagonal Down-Right Win
+Player P won via Diagonal 1
+Passed test #(x wins via down-right diag)2
+
+***********************
+Starting Test #3: Diagonal UP-Right NOT-Win (wrong player)
+Player Q won via Diagonal 2
+Passed test #(y wins via up-right diag)3
+
+***********************
+Starting Test #4: Bad Move Test (nearly full board)
+  1  2  3 
+1 P  *  * 
+2 *  *  * 
+3 *  *  * 
+Space already occupied
+  1  2  3 
+1 P  *  * 
+2 *  *  * 
+3 *  *  * 
+Passed test #4(x tried to place a token on a filled space at 1, 1, and takeTurn() correctly returned false)
+
+***********************
+Starting Test #5: Good Move Test (nearly full board, too big, but valid)
+  1  2  3 
+1 *  Q  P 
+2 Q  P  Q 
+3 *  Q  P 
+  1  2  3 
+1 P  Q  P 
+2 Q  P  Q 
+3 *  Q  P 
+Passed test #5
+
+***********************
+Starting Test #6: Simple Is-A-Tie Test (full board)
+  1  2  3 
+1 P  Q  P 
+2 Q  Q  P 
+3 P  P  Q 
+It's a tie!
+Passed test #6
+
+***********************
+Starting Test #7: Complex Not-A-Tie Test (nearly full board)
+  1  2  3 
+1 *  Q  P 
+2 Q  Q  P 
+3 P  P  Q 
+Passed test #7
+
+***********************
+Starting Test #8: Full Game Test A  - 1st player should win via row 1
+  1  2  3 
+1 *  *  * 
+2 *  *  * 
+3 *  *  * 
+  1  2  3 
+1 P  P  P 
+2 Q  Q  Q 
+3 *  *  * 
+Player P won via Row 1
+Passed test #8(x wins)
+
+***********************
+Starting Test #9: Full Game Test B  - 2nd player should win via column 3
+  1  2  3 
+1 *  *  * 
+2 *  *  * 
+3 *  *  * 
+  1  2  3 
+1 *  P  Q 
+2 P  P  Q 
+3 *  *  Q 
+Player Q won via Column 3
+Passed test #9(Q wins via column 3)
+
+***********************
+Starting Test #10: Full Game Test C  - Tie Game
+  1  2  3 
+1 *  *  * 
+2 *  *  * 
+3 *  *  * 
+It's a tie!
+  1  2  3 
+1 P  P  Q 
+2 Q  Q  P 
+3 P  P  Q 
+Passed test #10(it was a tie)
+
+***********************
+Starting Test #11: Full Game Test D  - 2nd player should win via down-right diagonal
+  1  2  3 
+1 *  *  * 
+2 *  *  * 
+3 *  *  * 
+  1  2  3 
+1 Q  P  * 
+2 P  Q  * 
+3 P  *  Q 
+Player Q won via Diagonal 1
+Passed test #11(y wins via down-right diagonal)
+
+***********************
+Starting Test #12: Full Game Test F  - all bad moves
+  1  2  3 
+1 *  *  * 
+2 *  *  * 
+3 *  *  * 
+Move not valid
+  1  2  3 
+1 *  *  * 
+2 *  *  * 
+3 *  *  * 
+Passed test #12(because takeTurn() return status correctly indicated illegal moves)
+
+***********************
+Starting Test #13: Full Game Test E  - 1st player should win via up-right diagonal
+  1  2  3 
+1 *  *  * 
+2 *  *  * 
+3 *  *  * 
+  1  2  3 
+1 P  P  Q 
+2 P  Q  * 
+3 Q  P  Q 
+Player Q won via Diagonal 2
+Passed test #13(x wins via up-right diagonal )
+
+***********************
+Starting Bonus Test #0: Full Game Test F  - BONUS Hard Tie Game Test
+  1  2  3 
+1 *  *  * 
+2 *  *  * 
+3 *  *  * 
+  1  2  3 
+1 P  P  Q 
+2 Q  Q  P 
+3 P  *  Q 
+Failed test #13(isTie() says it was not a time - but it should have been a tie)
+
+***********************
+Starting Bonus Test #1: BONUS: Complex Is-A-Tie Test (nearly full board via constructor)
+  1  2  3 
+1 P  P  Q 
+2 Q  Q  P 
+3 P  *  * 
+Failed bonus test #1
+
+***********************
+Starting Bonus Test #2: BONUS: Complex NOT-A-Tie Test (nearly full board)
+  1  2  3 
+1 P  P  Q 
+2 Q  Q  * 
+3 P  *  * 
+Passed bonus test #2
