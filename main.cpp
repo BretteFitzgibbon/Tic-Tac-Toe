@@ -1,20 +1,18 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "Tictactoe.h" // this file contains our class prototype
-#include "TestMe.xxx" // uncomment when ready to test your solution
+#include "Tictactoe.h" 
+#include "TestMe.xxx" 
 
 using namespace std;
 
 int main() 
 {
-  TestMe testInstance; // default constructor will do the test when it is called (uncomment when ready to test your solution)
+  TestMe testInstance; 
 
   cout << "Let's Play Tic Tac Toe...\n";
   cout << endl;
 
-  //vector<char> myVec = {'$', '$', '$', 'O', 'O', 'O', 'X'};
-  //Tictactoe myGame('-', myVec);
   Tictactoe myGame;
   vector <char> playerTokens = {'O', 'X'};
   int currentPlayerId = 0;
@@ -45,7 +43,7 @@ int main()
         myGame.printMe();
         cout << endl;
         currentPlayerId++;
-        currentPlayerId %= 2;  //currentPlayerId will always be 0 or 1
+        currentPlayerId %= 2;  // currentPlayerId will always be 0 or 1
 
       if (myGame.isWin('O'))
         {

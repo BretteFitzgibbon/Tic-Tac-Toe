@@ -1,18 +1,6 @@
 
 #include <iostream>
-#include "Tictactoe.h" // The Tictactoe.h file contains our class "blueprint" we must include it so we can reference the class below
-
-/*
-
-  WRITE YOUR OUT-OF-CLASS constructors and methods HERE for the Tic Tac Toe class
-
-  Start each constructor with the name of your class followed by the scope resolution operator like ::, and then the class name (again)
-
-  Start each method with its return type, followed by the name of your class followed the scope resolution operator, and then the method name
-
-  Use the Tictactoe.h file as a guide (along with the README.md file) to help guide which constructors and methods you need to implement.
-
-*/
+#include "Tictactoe.h" 
 
 Tictactoe::Tictactoe() 
 {
@@ -24,19 +12,19 @@ Tictactoe::Tictactoe()
     }    
 }
 
-
-Tictactoe::Tictactoe(char _emptyToken) //select what symbol to use for empty spaces on the board
+// select what symbol to use for empty spaces on the board
+Tictactoe::Tictactoe(char _emptyToken) 
 {
   emptyToken = _emptyToken; 
   for (int r = 0; r < 3; r++)
     {
      for (int c = 0; c < 3; c++)
-      grid[r][c] = _emptyToken; 
+        grid[r][c] = _emptyToken; 
     }    
 }
 
-
-Tictactoe::Tictactoe(char _emptyToken, std::vector<char> initTokens) //recreate the configuration from a game in progress
+// recreate the configuration from a game in progress
+Tictactoe::Tictactoe(char _emptyToken, std::vector<char> initTokens) 
 {
   emptyToken = _emptyToken; 
   int counter = 0;
@@ -65,7 +53,10 @@ bool Tictactoe::takeTurn(int rownum, int colnum, char playerToken)
     }    
   else
   {
-    rownum--; // players enter rows and columns from 1 to 3, but the computer's indexing interprets spaces on the board based on indices starting with 0 
+    /*
+    Decrements because players enter rows and columns from 1 to 3, but the computer's indexing interprets spaces on the board based on indices starting with 0 
+      */
+    rownum--; 
     colnum--;
     if (grid[rownum][colnum] != emptyToken)
       {
@@ -80,8 +71,8 @@ bool Tictactoe::takeTurn(int rownum, int colnum, char playerToken)
   }
 }
 
-
- bool Tictactoe::isWin(char playerToken) // all possible three-in-a-row configurations
+// all possible three-in-a-row configurations
+ bool Tictactoe::isWin(char playerToken) 
 {
   if (grid[0][0] == playerToken && grid[0][1] == playerToken && grid[0][2] == playerToken)
   {
